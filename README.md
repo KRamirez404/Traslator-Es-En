@@ -126,6 +126,7 @@ source backend/database/schema.sql
 ```
 
 Luego edita `backend/.env` con tus credenciales locales.
+Verifica que el archivo .env este dentro de la ruta `backend/.env`
 
 ### 2️⃣ Configurar Backend
 
@@ -272,6 +273,7 @@ La base de datos incluye 20 palabras de ejemplo en diferentes categorías:
 ### Error de conexión a MySQL (Local)
 - Verificar que MySQL esté corriendo
 - Verificar credenciales en `.env`
+- Verificar que este usando la contraseña correcta(darle un vistazo al docker-compose.yml)
 - Verificar que la base de datos exista
 
 ### Error CORS
