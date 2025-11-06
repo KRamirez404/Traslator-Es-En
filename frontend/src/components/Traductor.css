@@ -1,0 +1,204 @@
+.traductor-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+}
+
+.traductor-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.traductor-card h2 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.search-form {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #ffe6e6;
+  color: #d32f2f;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 1rem;
+  border: 1px solid #ffcdd2;
+}
+
+.resultado-card {
+  margin-top: 2rem;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.traduccion-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.idioma-section {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+}
+
+.idioma-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.palabra {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #667eea;
+  margin: 0;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: #764ba2;
+  font-weight: bold;
+}
+
+.categoria-badge {
+  background: #667eea;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.categoria-badge strong {
+  text-transform: capitalize;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .traductor-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .traductor-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .search-input {
+    min-width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .traduccion-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  .palabra {
+    font-size: 1.5rem;
+  }
+}

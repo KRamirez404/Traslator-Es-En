@@ -1,0 +1,278 @@
+.gestion-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.form-section,
+.lista-section {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.form-section h2,
+.lista-section h2 {
+  color: #667eea;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-error {
+  background: #ffe6e6;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+}
+
+.alert-success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.palabra-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.form-input {
+  padding: 0.875rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex: 1;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.btn-secondary:hover {
+  background: #d0d0d0;
+}
+
+.lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  min-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.loading,
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.tabla-container {
+  overflow-x: auto;
+}
+
+.palabras-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.palabras-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.palabras-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.palabras-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.palabras-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.palabras-table tbody tr:hover {
+  background-color: #f5f7fa;
+}
+
+.palabra-cell {
+  font-weight: 600;
+  color: #667eea;
+  text-transform: capitalize;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.btn-edit {
+  background: #e3f2fd;
+}
+
+.btn-edit:hover {
+  background: #bbdefb;
+  transform: scale(1.1);
+}
+
+.btn-delete {
+  background: #ffebee;
+}
+
+.btn-delete:hover {
+  background: #ffcdd2;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lista-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lista-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .search-box {
+    min-width: 100%;
+  }
+
+  .palabras-table {
+    font-size: 0.9rem;
+  }
+
+  .palabras-table th,
+  .palabras-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-section,
+  .lista-section {
+    padding: 1.5rem;
+  }
+
+  .palabras-table th:first-child,
+  .palabras-table td:first-child {
+    display: none;
+  }
+}
