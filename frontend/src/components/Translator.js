@@ -27,7 +27,13 @@ function Translator() {
         setTranslatedWord(result.spanish);
       }
     } catch (err) {
-      setError('Translation not found. Please add it to the dictionary first.');
+      if (err.response?.status === 404) {
+        setError('Translation not found. Please add it to the dictionary first.');
+      } else if (err.code === 'ERR_NETWORK') {
+        setError('Network error. Please check if the server is running.');
+      } else {
+        setError('An error occurred while translating. Please try again.');
+      }
     }
   };
 
