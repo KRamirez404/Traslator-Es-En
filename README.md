@@ -128,6 +128,9 @@ source backend/database/schema.sql
 Luego edita `backend/.env` con tus credenciales locales.
 Verifica que el archivo .env este dentro de la ruta `backend/.env`
 
+Asegurate de crear  el archivo .env dentro de la carpeta backend
+tal como se muestra en la ruta `backend/.env`
+
 ### 2️⃣ Configurar Backend
 
 ```powershell
@@ -232,6 +235,13 @@ DELETE /api/traducciones/:id
 ### Traductor
 - Interfaz intuitiva con diseño moderno
 - Traducción bidireccional instantánea
+
+![Texto alternativo](./images/interfaz-principal.png)
+![Texto alternativo](./images/crud-palabras.png)
+![Texto alternativo](./images/diccionario-palabras.png)
+
+
+
 
 ### Gestión de Palabras
 - Tabla completa con todas las palabras
